@@ -1,0 +1,23 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <canvas height="500" id="can" width="500"></canvas>
+    <script>
+      var img = 1;
+      var canvas = document.getElementById("can");
+      var ctx = canvas.getContext('2d');
+      ctx.drawImage("(" + img + ").png", 0, 0);
+      document.onkeydown = (e) => {
+        if(e.key == "ArrowUp"){
+          e.preventDefault();
+          if(img < 251){
+            img++;
+            ctx.drawImage("(" + img + ").png", 0, 0);
+          } 
+        }
+      }
+    </script>
+  </body>
+</html>
