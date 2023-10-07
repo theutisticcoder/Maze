@@ -13,6 +13,7 @@
         if(e.key == "ArrowUp"){
           e.preventDefault();
           if(img < 251){
+            ctx.clearRect();
             img++;
             ctx.drawImage("(" + img + ").png", 0, 0);
           } 
