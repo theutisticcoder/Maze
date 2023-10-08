@@ -20,7 +20,7 @@
       var canvas = document.getElementById("can");
       var ctx = canvas.getContext('2d');
        var frame = new Image();
-      frame.src = "(" + img + ").png";
+      frame.src = "(" + img + ").jpg";
       ctx.drawImage(frame, 0, 0);
       document.onkeydown = (e) => {
         if(e.key == "ArrowUp"){
@@ -31,7 +31,7 @@
           e.preventDefault();
           if(img > 0){
             img--;
-            frame.src = "(" + img + ").png";
+            frame.src = "(" + img + ").jpg";
           } 
         }
       }
