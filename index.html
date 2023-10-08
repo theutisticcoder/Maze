@@ -5,17 +5,30 @@
   <body>
     <canvas height="500" id="can" width="500"></canvas>
     <script>
+     
       var img = 1;
       var canvas = document.getElementById("can");
       var ctx = canvas.getContext('2d');
-      ctx.drawImage("(" + img + ").png", 0, 0);
+       var frame = new Image();
+      frame.src = "(" + img + ").png";
+      ctx.drawImage(frame, 0, 0);
       document.onkeydown = (e) => {
         if(e.key == "ArrowUp"){
           e.preventDefault();
           if(img < 251){
             ctx.clearRect();
             img++;
-            ctx.drawImage("(" + img + ").png", 0, 0);
+            
+            ctx.drawImage(frame, 0, 0);
+          } 
+        }
+         if(e.key == "ArrowDown"){
+          e.preventDefault();
+          if(img > 0){
+            ctx.clearRect();
+            img--;
+            
+            ctx.drawImage(frame, 0, 0);
           } 
         }
       }
