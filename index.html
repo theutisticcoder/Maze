@@ -18,7 +18,7 @@
           if(img < 251){
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             img++;
-            
+            frame.src = "(" + img + ").png";
             ctx.drawImage(frame, 0, 0);
           } 
         }
@@ -27,7 +27,7 @@
           if(img > 0){
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             img--;
-            
+            frame.src = "(" + img + ").png";
             ctx.drawImage(frame, 0, 0);
           } 
         }
