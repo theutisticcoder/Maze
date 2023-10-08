@@ -10,7 +10,12 @@
   <body>
     <canvas id="can"></canvas>
     <script>
-     
+     function forwards(){
+       if(img < 250){
+            frame.src = "(" + (img++) + ").png";
+         requestAnimationFrame(forwards);
+          } 
+     }
       var img = 1;
       var canvas = document.getElementById("can");
       var ctx = canvas.getContext('2d');
@@ -20,10 +25,7 @@
       document.onkeydown = (e) => {
         if(e.key == "ArrowUp"){
           e.preventDefault();
-          if(img < 251){
-            img++;
-            frame.src = "(" + img + ").png";
-          } 
+          requestAnimationFrame(forwards);
         }
          if(e.key == "ArrowDown"){
           e.preventDefault();
