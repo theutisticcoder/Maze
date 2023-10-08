@@ -23,7 +23,7 @@
           if(img < 251){
             img++;
             frame.src = "(" + img + ").png";
-            ctx.drawImage(frame, 0, 0);
+            ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
           } 
         }
          if(e.key == "ArrowDown"){
@@ -31,7 +31,7 @@
           if(img > 0){
             img--;
             frame.src = "(" + img + ").png";
-            ctx.drawImage(frame, 0, 0);
+            ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
           } 
         }
       }
